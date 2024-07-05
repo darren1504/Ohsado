@@ -1,0 +1,162 @@
+@use "asset" as asset;
+@use "index_extend";
+@use "main_header";
+@use "main_footer";
+
+main {
+  width: 100%;
+  height: max-content;
+  margin-top: 80px;
+  h1 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    font-family: YuMincho, "游明朝";
+    margin-bottom: 8px;
+    margin-left: 64px;
+  }
+  h2 {
+    font-size: 3.2rem;
+    font-weight: normal;
+    font-family: YuMincho, "游明朝";
+    margin-left: 64px;
+  }
+  .about_top {
+    width: 100%;
+    height: 600px;
+    margin: 80px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    figure {
+      width: 760px;
+      height: 540px;
+      opacity: 0.8;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .right_flex {
+      margin-right: 64px;
+      h3 {
+        font-size: 3.6rem;
+        font-weight: normal;
+        font-family: YuMincho, "游明朝";
+        margin-bottom: 32px;
+        padding-left: 100px;
+        border-bottom: solid 1px asset.$main;
+      }
+      p {
+        width: 580px;
+        height: 120px;
+        font-size: 1.6rem;
+        line-height: 3.2rem;
+        margin-bottom: 32px;
+        strong {
+          display: inline-block;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            width: 82px;
+            height: 7px;
+            background: #9dc08b;
+            bottom: 7px;
+            right: 7px;
+            z-index: -1;
+          }
+          &.will {
+            @extend strong;
+            &::after {
+              width: 66px;
+              right: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .about_main {
+    width: 100%;
+    height: max-content;
+    background: url("https://click.ecc.ac.jp/ecc/darren/Ohsado/public/img/background-circles.svg");
+    margin-bottom: 64px;
+    h2 {
+      font-size: 3.6rem;
+      font-weight: normal;
+      text-align: center;
+      margin-left: 0;
+      margin-bottom: 40px;
+    }
+    .flex_wrap {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .box {
+        width: 600px;
+        height: 400px;
+        background: asset.$light;
+        border: solid 1px asset.$main;
+        padding-left: 40px;
+        margin-bottom: 40px;
+        &:nth-child(2n) {
+          margin-top: 40px;
+        }
+        h2 {
+          font-size: 1.6rem;
+          text-align: left;
+          margin-left: 0;
+          margin-top: 16px;
+          margin-bottom: 0;
+          font-family: unset;
+        }
+        h3 {
+          font-size: 3.2rem;
+          font-weight: normal;
+          font-family: YuMincho, "游明朝";
+          margin-bottom: 36px;
+          margin-top: 8px;
+        }
+        p {
+          width: 520px;
+          font-size: 1.6rem;
+          line-height: 3.2rem;
+        }
+      }
+    }
+  }
+  .trial {
+    width: 100%;
+    height: 190px;
+    margin-bottom: 60px;
+    h3 {
+      font-size: 3.6rem;
+      font-weight: normal;
+      font-family: YuMincho, "游明朝";
+      text-align: center;
+    }
+    .flex_wrap {
+      width: 650px;
+      height: 100px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 16px auto;
+      a {
+        @extend .bigbtn;
+        &:last-child {
+          color: asset.$main;
+          background: asset.$light;
+          border: solid 2px asset.$main;
+          &:hover {
+            color: asset.$light;
+            background: asset.$main;
+            transition: ease 0.3s;
+          }
+        }
+      }
+    }
+  }
+}

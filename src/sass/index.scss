@@ -1,0 +1,513 @@
+@use "asset" as asset;
+@use "index_extend";
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  .left_flex {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    figure {
+      width: 50px;
+      height: 50px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .search_bar {
+      width: 400px;
+      height: 32px;
+      position: relative;
+      input {
+        width: 400px;
+        height: 32px;
+        background: #eaeaea;
+        font-size: 1.4rem;
+        padding-left: 16px;
+        &::placeholder {
+          color: asset.$dark;
+        }
+        &:focus {
+          outline: 0;
+        }
+      }
+      a {
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 6px;
+        right: 8px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  ul {
+    width: 30%;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    li {
+      width: 100px;
+      height: 32px;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 32px;
+        text-align: center;
+        color: asset.$dark;
+        position: relative;
+        font-size: 1.4rem;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          width: 100%;
+          height: 2px;
+          background: asset.$main;
+          transform: scale(0, 1);
+          transform-origin: right top;
+          transition: transform 0.3s;
+        }
+        &:hover {
+          color: asset.$main;
+          transition: ease 0.3s;
+        }
+        &:hover:after {
+          transform: scale(1, 1);
+          transform-origin: left top;
+        }
+      }
+    }
+  }
+  .right_flex {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: 8px;
+    a {
+      display: block;
+      width: 24px;
+      height: 24px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .button_wrap {
+    width: 25%;
+    display: flex;
+    gap: 16px;
+    margin-left: 24px;
+    a {
+      width: 140px;
+      @extend .basebtn;
+    }
+  }
+}
+
+main {
+  width: 100%;
+  height: max-content;
+  .main_visual {
+    width: 100%;
+    height: 620px;
+    background: url("https://click.ecc.ac.jp/ecc/darren/Ohsado/public/img/main_visual.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 60px;
+    h1 {
+      width: 560px;
+      font-size: 4rem;
+      color: asset.$light;
+      font-weight: normal;
+      font-family: YuMincho, "游明朝";
+      position: absolute;
+      left: 48px;
+      bottom: 48px;
+    }
+  }
+  .about {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    .left_flex {
+      margin-left: 64px;
+      h2 {
+        font-size: 1.8rem;
+        font-weight: normal;
+        font-family: YuMincho, "游明朝";
+        margin-bottom: 8px;
+      }
+      h3 {
+        font-size: 3.6rem;
+        font-weight: normal;
+        font-family: YuMincho, "游明朝";
+        margin-bottom: 16px;
+        border-bottom: solid 1px asset.$main;
+      }
+      p {
+        width: 590px;
+        height: 160px;
+        font-size: 1.6rem;
+        line-height: 3.2rem;
+        margin-bottom: 16px;
+      }
+      a {
+        @extend .basebtn;
+      }
+    }
+    figure {
+      width: 760px;
+      height: 540px;
+      img {
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+      }
+    }
+  }
+  .classroom {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    figure {
+      width: 760px;
+      height: 540px;
+      img {
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        object-fit: cover;
+      }
+    }
+    .right_flex {
+      margin-right: 64px;
+      h2 {
+        font-size: 1.8rem;
+        font-weight: normal;
+        font-family: YuMincho, "游明朝";
+        margin-bottom: 8px;
+      }
+      h3 {
+        font-size: 3.6rem;
+        font-weight: normal;
+        font-family: YuMincho, "游明朝";
+        margin-bottom: 16px;
+        border-bottom: solid 1px asset.$main;
+        padding-left: 374px;
+      }
+      p {
+        width: 590px;
+        height: 100px;
+        font-size: 1.6rem;
+        line-height: 3.2rem;
+        margin-bottom: 16px;
+      }
+      .inner_flex {
+        display: flex;
+        justify-content: flex-end;
+        a {
+          @extend .basebtn;
+        }
+      }
+    }
+  }
+  .course {
+    width: 100%;
+    height: 1400px;
+    margin-bottom: 60px;
+    h2 {
+      font-size: 1.8rem;
+      font-weight: normal;
+      font-family: YuMincho, "游明朝";
+      margin-bottom: 8px;
+      margin-left: 64px;
+    }
+    h3 {
+      font-size: 3.6rem;
+      font-weight: normal;
+      font-family: YuMincho, "游明朝";
+      margin-left: 64px;
+    }
+    .flex_wrap {
+      margin-top: 64px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+      .box {
+        width: 500px;
+        height: 570px;
+        h2 {
+          font-size: 1.6rem;
+          font-family: YuGothic, "游ゴシック";
+          margin-left: 0;
+        }
+        h3 {
+          font-size: 3.2rem;
+          margin-bottom: 16px;
+          margin-left: 0;
+        }
+        figure {
+          width: 500px;
+          height: 290px;
+          margin-bottom: 16px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        p {
+          width: 500px;
+          height: 100px;
+          font-size: 1.6rem;
+          line-height: 3.2rem;
+          margin-bottom: 16px;
+        }
+        .inner_flex {
+          display: flex;
+          justify-content: flex-end;
+          a {
+            @extend .basebtn;
+          }
+        }
+      }
+    }
+  }
+  .review {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 60px;
+    h3 {
+      font-size: 3.6rem;
+      font-weight: normal;
+      font-family: YuMincho, "游明朝";
+      text-align: center;
+    }
+    .flex_wrap {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 16px;
+      .card {
+        width: 300px;
+        height: 400px;
+        border: solid 1px asset.$dark;
+        background: asset.$light;
+        figure {
+          width: 80px;
+          height: 80px;
+          margin: 16px auto;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        p {
+          width: 235px;
+          height: 270px;
+          margin: 0 auto;
+          font-size: 1.4rem;
+          line-height: 3.2rem;
+        }
+      }
+    }
+  }
+  .trial {
+    width: 100%;
+    height: 190px;
+    margin-bottom: 60px;
+    h3 {
+      font-size: 3.6rem;
+      font-weight: normal;
+      font-family: YuMincho, "游明朝";
+      text-align: center;
+    }
+    .flex_wrap {
+      width: 650px;
+      height: 100px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 16px auto;
+      a {
+        @extend .bigbtn;
+        &:last-child {
+          color: asset.$main;
+          background: asset.$light;
+          border: solid 2px asset.$main;
+          &:hover {
+            color: asset.$light;
+            background: asset.$main;
+            transition: ease 0.3s;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 360px;
+  background: asset.$light;
+  padding-top: 8px;
+  figure {
+    width: 100px;
+    height: 100px;
+    margin: 0px auto;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .form_wrap {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    input {
+      width: 300px;
+      height: 50px;
+      border: solid 1px #dfdfdf;
+      background: asset.$light;
+      font-size: 1.4rem;
+      padding-left: 16px;
+      &::placeholder {
+        color: asset.$dark;
+      }
+      &:focus {
+        outline: 0;
+      }
+    }
+    a {
+      display: block;
+      width: 60px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-align: center;
+      color: asset.$light;
+      background: asset.$main;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+    margin: 32px auto;
+    border-bottom: solid 1px #dfdfdf;
+    li {
+      width: 150px;
+      height: 50px;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 50px;
+        font-size: 1.4rem;
+        color: asset.$dark;
+        text-align: center;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          width: 100%;
+          height: 2px;
+          background: asset.$main;
+          transform: scale(0, 1);
+          transform-origin: right top;
+          transition: transform 0.3s;
+        }
+        &:hover {
+          color: asset.$main;
+          transition: ease 0.3s;
+        }
+        &:hover:after {
+          transform: scale(1, 1);
+          transform-origin: left top;
+        }
+      }
+    }
+  }
+  .flex_wrap {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    .button_wrap {
+      display: flex;
+      justify-content: space-around;
+      a {
+        @extend .basebtn;
+        width: 80px;
+        height: 36px;
+        line-height: 36px;
+        &:last-child {
+          font-weight: normal;
+          color: asset.$dark;
+          background: none;
+          &:hover {
+            font-weight: bold;
+            color: asset.$light;
+            background: asset.$main;
+          }
+        }
+      }
+    }
+    .icon_wrap {
+      width: 120px;
+      height: 24px;
+      display: flex;
+      justify-content: space-around;
+      figure {
+        width: 24px;
+        height: 24px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    p {
+      font-size: 1.4rem;
+      font-family: YuMincho, "游明朝";
+    }
+  }
+}

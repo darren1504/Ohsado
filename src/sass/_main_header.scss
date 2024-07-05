@@ -1,0 +1,125 @@
+@use "asset" as asset;
+@use "index_extend";
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  .left_flex {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    figure {
+      width: 50px;
+      height: 50px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .search_bar {
+      width: 400px;
+      height: 32px;
+      position: relative;
+      input {
+        width: 400px;
+        height: 32px;
+        background: #eaeaea;
+        font-size: 1.4rem;
+        padding-left: 16px;
+        &::placeholder {
+          color: asset.$dark;
+        }
+        &:focus {
+          outline: 0;
+        }
+      }
+      a {
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 6px;
+        right: 8px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  ul {
+    width: 30%;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    li {
+      width: 100px;
+      height: 32px;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 32px;
+        text-align: center;
+        color: asset.$dark;
+        position: relative;
+        font-size: 1.4rem;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          width: 100%;
+          height: 2px;
+          background: asset.$main;
+          transform: scale(0, 1);
+          transform-origin: right top;
+          transition: transform 0.3s;
+        }
+        &:hover {
+          color: asset.$main;
+          transition: ease 0.3s;
+        }
+        &:hover:after {
+          transform: scale(1, 1);
+          transform-origin: left top;
+        }
+      }
+    }
+  }
+  .right_flex {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: 8px;
+    a {
+      display: block;
+      width: 24px;
+      height: 24px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .button_wrap {
+    width: 25%;
+    display: flex;
+    gap: 16px;
+    margin-left: 24px;
+    a {
+      width: 140px;
+      @extend .basebtn;
+    }
+  }
+}

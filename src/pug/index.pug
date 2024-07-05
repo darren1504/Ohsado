@@ -1,0 +1,139 @@
+doctype html
+html(lang="ja")
+    head 
+        include _html_header
+        title 御茶堂
+        link(rel="stylesheet", href="css/index.css")
+    body 
+        header#header 
+            .left_flex 
+                figure 
+                    a(href="index.html"): img(src="img/ohsado_logo.svg", alt="Ohsado Logo")
+                .search_bar 
+                    input(type="text" placeholder="検索")
+                    a(href="#"): img(src="img/search.svg", alt="")
+            ul 
+                li: a(href="about.html") 御茶堂について
+                li: a(href="#") 茶道室
+                li: a(href="#course") コース
+                li: a(href="#") お茶のこと
+            .right_flex  
+                a(href="#"): img(src="img/user.svg", alt="")
+                a(href="#"): img(src="img/cart.svg", alt="")
+            .button_wrap
+                a(href="#") 無料体験
+                a(href="#") チュートリアル 
+        main 
+            .main_visual 
+                h1 茶道を広げよう、文化の交流と日本の美を触れる
+            .about 
+                .left_flex 
+                    h2 御茶堂とは
+                    h3 茶道のことを楽しく学ぶ
+                    p 茶道の心と技を、母国語で気軽に学べる「茶道学習サイト、御茶堂」。
+                        | 留学生や外国の皆さんへ、茶道と和菓子作りの魅力をお届けします。
+                        | 京都を拠点に、茶道教室やお茶のカフェをご紹介。実践のための茶道具も手に入ります。
+                        | 言語切り替え機能で、どなたでも茶道の魅力に触れられます。日本文化を楽しみながら学び、茶道の奥深さを体験しましょう。
+                    a(href="about.html") 御茶堂について 
+                figure 
+                    img(src="img/tea4.jpg", alt="")
+            .classroom 
+                figure 
+                    img(src="img/kyoto.jpg", alt="")
+                .right_flex 
+                    .inner_flex 
+                        h2 茶道室の紹介
+                    h3 京都の茶道室
+                    p 京都の茶道室は、日本の美意識が息づく静寂な空間で、茶道の精髄に触れる特別な場所です。
+                        | 伝統と革新が共存する和の空間で、魅力的なコースが皆さまをお待ちしています。
+                    .inner_flex 
+                        a(href="#") 茶道室について
+            .course#course  
+                h2 コースの紹介
+                h3 選べるコース
+                .flex_wrap 
+                    .box 
+                        h2 初めて茶道を触れたい方におすすめ
+                        h3 初心者コース
+                        figure 
+                            img(src="img/tea3.jpg", alt="")
+                        p 基礎から学び、誰でも体験できる初心者向けのコースです。
+                            | 基本の心得から作法、茶道具の使い方まで分かりやすく丁寧に指導します。ぜひ体験してみてくださいませ。
+                        .inner_flex 
+                            a(href="#") コースの詳細 
+                    .box 
+                        h2 英語で茶道を教えるコース
+                        h3 英語で茶道コース
+                        figure 
+                            img(src="img/foreign_tea.jpeg", alt="")
+                        p 外国人や観光客向けのコースです。
+                            | 英語で分かりやすく、世界中の参加者と共に茶道を学ぶ体験です。日本の文化を理解し、異文化交流を楽しむ機会です。
+                        .inner_flex 
+                            a(href="#") コースの詳細 
+                    .box 
+                        h2 お茶と和菓子をどちらも楽しみたい方におすすめ
+                        h3 お茶と和菓子コース
+                        figure 
+                            img(src="img/tea_sweets.jpg", alt="")
+                        p 茶道と和菓子作りの魅力を体験できるコースです。
+                            | 伝統的なお茶の点て方と同時に、美味しい和菓子を手作り。和の心と味覚を楽しみましょう。
+                        .inner_flex 
+                            a(href="#") コースの詳細 
+                    .box 
+                        h2 茶道のことをマスターしたい方におすすめ
+                        h3 真の茶道コース
+                        figure 
+                            img(src="img/tea1.jpg", alt="")
+                        p 茶道を深く理解し、マスターしたい方に届けた究極のコースです。
+                            | スキルや芸術性を極め、茶道のことをもっと深く触れます。ぜひ茶道のことを上手くなりたい方、体験してみてはいかがでしょうか。
+                        .inner_flex 
+                            a(href="#") コースの詳細 
+            .review 
+                h3 みんなの声
+                .flex_wrap 
+                    .card 
+                        figure 
+                            img(src="img/profile.svg", alt="")
+                        p I tried the English Tea Ceremony Course and it was an amazing experience!
+                            | Learning about Japanese culture in English made it accessible and enjoyable. The global community aspect added a unique touch. Highly recommended!
+                    .card 
+                        figure 
+                            img(src="img/profile2.svg", alt="")
+                        p 初めての茶道体験でしたが、講師の分かりやすい説明と優雅な雰囲気に感動しました。お茶を点てる楽しさを学び、日本の伝統に触れる素晴らしい機会でした。
+                    .card 
+                        figure 
+                            img(src="img/profile3.svg", alt="")
+                        p 初めての茶道体験は心に残るものでした。静かな茶室でのお茶の点て方や儀式、それに美しい茶器。和やかな雰囲気と心地よい香りが、日本の伝統文化への新たな理解を生み出しました。
+                    .card 
+                        figure 
+                            img(src="img/profile4.svg", alt="")
+                        p 和菓子作りとの組み合わせは最高でした。自分で作った和菓子と共にお茶を頂くことで、日本の美味と美意識を同時に感じられ、これまでにない贅沢なひと時でした。
+            .trial 
+                h3 無料体験とチュートリアルから始めよう
+                .flex_wrap 
+                    a(href="#") 無料体験
+                    a(href="#") チュートリアル
+        footer 
+            figure 
+                img(src="img/ohsado_logo_text.svg", alt="")
+            .form_wrap 
+                input(type="text" placeholder="メールアドレスを記入")
+                a(href="") 登録
+            ul 
+                li: a(href="#header") トップ 
+                li: a(href="about.html") 御茶堂について 
+                li: a(href="#") 茶道室 
+                li: a(href="#course") コース 
+            .flex_wrap 
+                .button_wrap 
+                    a(href="#") 日本語
+                    a(href="#") 英語
+                .icon_wrap 
+                    figure 
+                        a(href=""): img(src="img/x_icon.svg", alt="")
+                    figure 
+                        a(href=""): img(src="img/instagram.svg", alt="")
+                    figure 
+                        a(href=""): img(src="img/facebook.svg", alt="")
+                p &copy; 2023 Ohsado 
+        include _html_footer

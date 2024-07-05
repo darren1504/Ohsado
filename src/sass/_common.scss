@@ -1,0 +1,19 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI",
+    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family: YuGothic, "游ゴシック", YuMincho, "游明朝";
+  a {
+    text-decoration: none;
+  }
+  li {
+    list-style: none;
+  }
+}
